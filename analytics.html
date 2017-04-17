@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="css/favicon.ico">
+    <title>Privacy CSC591 Project</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <script src="css/ie-emulation-modes-warning.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">US Agencies Corpus</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+              <li><a href="index.html">Overview</a></li> 
+            <li><a href=reports.html>Reports</a></li>
+            <li class="active"><a href="#">Analytics <span class="sr-only">(current)</span></a></li>
+            <li><a href="search.html">Search Using API</a></li>
+          </ul>
+            <cite>Contributors:</cite>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Danish Suri</a></li>
+            <li><a href="">Sagar Gupta</a></li>
+            <li><a href="">Krishna Agarwala</a></li>
+          </ul>
+            <cite>Data Source and References</cite>
+          <ul class="nav nav-sidebar">
+            <li><a href="">New York Times API</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Analytics</h1>
+
+          <h4 class="sub-header">Ratio of Privacy News to Non-Privacy News</h4>
+          <div class="row placeholders">
+            <div class="col-sm-6 placeholder">
+              <img src="images/CIA/chart.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">Central Intelligence Agency</span>
+            </div>
+              <div class="col-sm-6 placeholder">
+              <img src="images/NSA/chart21.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">National Security Agency</span>
+            </div>
+          </div>
+              <div class="row placeholders">
+              <div class="col-sm-6 placeholder">
+              <img src="images/FBI/chart31.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">Federal Bureau of Investigation</span>
+            </div>
+              <div class="col-sm-6 placeholder">
+              <img src="images/DOD/chart41.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">United States Department of Defense</span>
+            </div>
+    
+          </div>
+          
+          <h4 class="sub-header">Impact of incidents</h4>
+          <div class="row placeholders">
+            <div class="col-sm-6 placeholder">
+              <img src="images/CIA/chart2.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">Central Intelligence Agency</span>
+            </div>
+              <div class="col-sm-6 placeholder">
+              <img src="images/NSA/chart22.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">National Security Agency</span>
+            </div>
+          </div>
+          <div class="row placeholders">
+              <div class="col-sm-6 placeholder">
+              <img src="images/FBI/chart32.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">Federal Bureau of Investigation</span>
+            </div>
+              <div class="col-sm-6 placeholder">
+              <img src="images/DOD/chart42.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">United States Department of Defense</span>
+            </div>
+    
+          </div>
+          
+          <h4 class="sub-header">Sentiment Analysis</h4>
+          <div class="row placeholders">
+            <div class="col-sm-6 placeholder">
+              <img src="images/CIA/chart3.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">Central Intelligence Agency</span>
+            </div>
+              <div class="col-sm-6 placeholder">
+              <img src="images/NSA/chart23.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">National Security Agency</span>
+            </div>
+          </div>
+          <div class="row placeholders">
+              <div class="col-sm-6 placeholder">
+              <img src="images/FBI/chart33.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">Federal Bureau of Investigation</span>
+            </div>
+              <div class="col-sm-6 placeholder">
+              <img src="images/DOD/chart43.png" width="900" height="900" class="img-responsive" alt="FBI">
+              <span class="text-muted">United States Department of Defense</span>
+            </div>
+    
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

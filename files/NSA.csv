@@ -1,0 +1,70 @@
+Tag,Date,Privacy(Y/N),Impact,Sentiments,Agency,Keyword
+Microsoft Says Users Are Protected From Alleged NSA Malware,2017-04-15,N,None,Neutral,NSA-Microsoft,NSA
+Hackers Release Files Indicating NSA Monitored Global Bank Transfers,2017-04-14,Y,Middle Eastern Citizens(Dubai),Negative,NSA,NSA
+Trump's Intelligence Doubts Parroted by Russia,2017-04-11,N,None,Neutral,NSA,NSA
+Hacker Group Releases Password to Alleged NSA Files,2017-04-08,Y,US Citizens,Negative,NSA,NSA
+"Trump, Declining to Provide Evidence, Says Thinks Obama Adviser Rice Committed Crime: NYT",2017-04-07,N,None,Neutral,NSA,NSA
+A Scramble at Cisco Exposes Uncomfortable Truths About U.S. Cyber Defense,2017-03-29,Y,US Citizens,Negative,NSA-Wikileaks-Cisco-CIA,NSA
+"House Intelligence Postpones Closed Session With FBI, NSA",2017-03-27,N,None,Neutral,NSA,NSA
+The Week When Trump's Wiretap Accusation Died,2017-03-25,N,None,Neutral,NSA,NSA
+Russia-US-Election-Interference,2017-03-24,Y,US Citizens,Negative,NSA,NSA
+NSA-Telephone-Surveillance,2017-03-22,Y,US Citizens,Negative,NSA,NSA
+Russia-US-Election-Interference,2017-03-21,Y,US Citizens,Negative,NSA,NSA
+Russia-US-Election-Interference,2017-03-21,N,None,Neutral,NSA-FBI,NSA
+Russia-US-Election-Interference,2017-03-20,N,None,Neutral,NSA-Republican,NSA
+Russia-US-Election-Interference,2017-03-20,N,None,Neutral,DNC,NSA
+Russia-US-Election-Interference,2017-03-19,N,None,Neutral,Devin Nunes,NSA
+NSA-Telephone-Surveillance,2017-03-22,Y,US Citizens,Negative,NSA,NSA+Privacy
+CIA-Wikileaks-Dump,2017-03-11,N,None,Neutral,CIA-NSA-Wikileaks,NSA+Privacy
+CIA-Wikileaks-Dump,2017-03-07,Y,US Citizens,Negative,CIA-NSA-Wikileaks,NSA+Privacy
+Trump-Spy-Law,2017-03-01,N,None,Neutral,US Govt,NSA+Privacy
+Trump-Spy-Law,2017-01-18,Y,US Citizens,Positive,US Govt,NSA+Privacy
+US Agencies Getting Access to Raw NSA Intercepts,2017-01-13,Y,Global,Negative,NSA-US Intelligence Agencies,NSA+Privacy
+Lawsuit Over Alleged NSA Olympic Spying,2017-01-10,Y,Olympics,Negative,NSA,NSA+Privacy
+Snowden in Contact With Russia's Spy Services,2016-12-22,N,None,Neutral,NSA,NSA+Privacy
+US Privacy Board in Disarray Before Trump Takes Office,2016-12-22,N,None,Neutral,NSA,NSA+Privacy
+Yahoo Email Scan,2016-12-21,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy
+NSA Watchdog on Leave in Whistleblower Case,2016-12-19,N,None,Neutral,NSA,NSA+Privacy
+U.S. to Disclose Estimate of Number of Americans Under Surveillance,2016-12-16,Y,US Citizens,Negative,NSA,NSA+Privacy
+"Trump Election Ignites Fears Over U.S. Encryption, Surveillance Policy",2016-11-10,N,None,Neutral,US Govt,NSA+Privacy
+Upstart Pirate Party Senses Victory in Iceland Elections,2016-10-28,N,None,Neutral,Iceland,NSA+Privacy
+German Parliament Approves Controversial Espionage Law,2016-10-21,Y,German Citizens,Negative,NSA-Germany,NSA+Privacy
+Should We See Everything a Cop Sees,2016-10-18,Y,US Citizens,Negative,US-Police,NSA+Privacy
+NSA Contractor Arrest,2016-10-06,Y,NSA-US Citizens,Negative,NSA,NSA+Privacy
+Yahoo Email Scan,2016-10-06,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy
+NSA Contractor Arrest,2016-10-05,Y,NSA-US Citizens,Negative,NSA,NSA+Privacy
+Yahoo Email Scan,2016-10-05,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy
+Yahoo Email Scan,2016-10-04,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy
+U.S. Intelligence Community Opposes Limits to Privacy Watchdog,2016-10-03,Y,US Citizens,Neutral,NSA,NSA+Privacy
+Snowden Is No Whistleblower,2016-09-16,N,None,Neutral,NSA,NSA+Privacy
+Snowden Is No Whistleblower,2016-09-15,N,None,Neutral,NSA,NSA+Privacy
+Oliver Stone Finds in 'Snowden' a Real Government Conspiracy,2016-09-13,N,None,Neutral,NSA,NSA+Privacy
+Canada Stops Sharing Some Spy Info With Allies After Breach,2016-01-28,Y,Canadian Officials,Negative,NSA+CANDA,NSA+Privacy
+NSA Phone Record Collection,2016-01-15,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-12-17,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-12-16,Y,US Citizens,Negative,NSA,NSA+Privacy
+Cyber Data-Sharing,2015-12-15,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-12-08,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-12-07,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-12-05,Y,US Citizens,Negative,NSA,NSA+Privacy
+Paris Attack,2015-11-28,N,None,Neutral,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-11-27,Y,US Citizens,Negative,NSA,NSA+Privacy
+Paris Attack,2015-11-16,N,None,Neutral,NSA,NSA+Privacy
+Microsoft to Keep German Customers' Cloud Data in Country,2015-11-11,Y,German Citizens,Negative,Microsoft-NSA-Germany,NSA+Privacy
+NSA Phone Record Collection,2015-11-09,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-10-29,Y,US Citizens,Negative,NSA,NSA+Privacy
+US Newly Accused of Spying in France,2015-06-24,Y,France,Negative,NSA+France,NSA+Privacy
+NSA Phone Record Collection,2015-05-18,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-05-14,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-05-13,Y,US Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-05-13,Y,US Citizens,Negative,NSA,NSA+Privacy
+"Germany Gives Huge Amount of Phone, Text Data to U.S.",2015-05-12,Y,US Citizens,Negative,NSA,NSA+Privacy
+U.S. Agency Sought German Help to Spy on Siemens-Newspaper,2015-05-10,Y,German Citizens,Negative,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-05-07,Y,US Citizens,Negative,NSA,NSA+Privacy
+Republicans Move to Extend Spies' Power to Collect Phone Data,2015-04-22,Y,US Citizens,Negative,NSA,NSA+Privacy
+House Passes Bill Designed to Thwart Cyberattacks,2015-04-22,N,None,Neutral,NSA,NSA+Privacy
+NSA Phone Record Collection,2015-04-22,Y,US Citizens,Negative,NSA,NSA+Privacy
+Privacy Advocates Seek More Openness on NSA Phone Record Collection,2015-04-22,Y,US Citizens,Negative,NSA,NSA+Privacy
+"NSA, British Spies Hack Gemalto to Tap Mobile Calls",2015-02-19,Y,Gemalto,Negative,NSA+BritishSpy,NSA+Privacy+Breach
+Flaws Could Expose Users of Privacy-Protecting Software,2014-07-23,Y,SoftwareUsers,Negative,NSA,NSA+Privacy+Breach
+Global Netizens Worried About U.S. Spying,2013-06-01,Y,NSA-GlobalCitizens,Negative,NSA,NSA+Privacy+Breach

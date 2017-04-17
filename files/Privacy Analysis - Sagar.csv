@@ -1,0 +1,70 @@
+Tag,Incident,Date,Privacy(Y/N),Impact,Sentiments,Agency,Keyword
+CIA Director Takes Negative Tone on Group Trump Has Praised,CIA-Wikileaks,2017-04-14,Y,World,Negative,CIA,CIA Privacy
+CIA Director Calls WikiLeaks 'Hostile Intelligence Service',CIA-Wikileaks,2017-04-13,Y,World,Negative,CIA,CIA Privacy
+Obama Aide Denies Using Intel to Spy on Trump Advisers,,2017-04-04,Y,US Government,Negative,CIA+US Govt.,CIA Privacy
+"Trump Changes Relationship Between White House, Spy Agencies",Trump-Russia,2017-04-01,Y,US Government,Negative,US Govt.,CIA Privacy
+"Trump's Approach to Intel Agencies Shows Anxiety, Distrust",Trump-Russia,2017-03-31,Y,US Government,Negative,US Govt.,CIA Privacy
+Apple: Software Flaws in Latest WikiLeaks Docs Are All Fixed,CIA-Wikileaks,2017-03-24,Y,World,Positive,Apple+CIA,CIA Privacy
+Trump's Russian Imbroglio Prompts Republican Rethink on Surveillance Law,Trump-Russia,2017-03-20,Y,World,Neutral,US + Russia Govt.,CIA Privacy
+Yahoo Breach Indictments May Shed Light on Other Hacks,Yahoo Breach,2017-03-16,Y,World,Positive,CIA+Yahoo,CIA Privacy
+"Russian Agents, Hackers Charged in Massive Yahoo Breach",Yahoo Breach,2017-03-15,Y,World,Negative,Russia+CIA+Yahoo,CIA Privacy
+"Who and Why, Twin Mysteries Behind Leak of CIA's Cybertools",CIA-Wikileaks,2017-03-12,Y,US Citizens,Negative,CIA-Wikileaks,CIA Privacy
+What the CIA WikiLeaks Dump Tells Us: Encryption Works,CIA-Wikileaks,2017-03-11,N,None,Neutral,CIA-Wikileaks,CIA Privacy
+WikiLeaks Offers CIA Hacking Tools to Tech Companies-Assange,CIA-Wikileaks,2017-03-09,Y,Tech Industry,Positive,CIA-Wikileaks,CIA Privacy
+CIA Leaks Bolster Case for Privacy Treaty: UN Expert,CIA-Wikileaks,2017-03-09,Y,World,Negative,CIA-Wikileaks+UN,CIA Privacy
+WikiLeaks Aid on CIA Software Holes Could Be Mixed Blessing,CIA-Wikileaks,2017-03-09,N,Tech Industry,Positive,CIA-Wikileaks,CIA Privacy
+CIA Contractors Likely Source of Latest WikiLeaks Release-U.S. Officials,CIA-Wikileaks,2017-03-08,Y,World,Negative,CIA-Wikileaks,CIA Privacy
+U.N. Expert Urges States to Work Toward Cyber Surveillance Treaty,,2017-03-08,Y,World,Positive,UN,CIA Privacy
+WikiLeaks Fallout: Should You Worry About Alleged CIA Hacks?,,2017-03-08,Y,World,Neutral,CIA+Wikileaks,CIA Privacy
+WikiLeaks: CIA Has Targeted Everyday Gadgets for Snooping,CIA-Wikileaks,2017-03-07,Y,World,Negative,CIA+Wikileaks,CIA Privacy
+CIA Unveils New Rules for Collecting Information on Americans,CIA Info gather rule,2017-01-18,Y,US Citizens,Neutral,CIA,CIA Privacy
+CIA Publishes Guidelines for Handling Americans' Info,CIA info gather rule,2017-01-18,Y,US Citizens,Neutral,CIA ,CIA Privacy
+"Gunman Shoots, Wounds US Consular Official in Mexico",,2017-01-07,N,None,Negative,US Govt.,CIA Privacy
+Yahoo Email Scan Shows U.S. Spy Push to Recast Constitutional Privacy,,2016-12-21,Y,World,Negative,Yahoo+US Govt.,CIA Privacy
+NSA Watchdog on Leave in Whistleblower Case,,2016-12-19,N,None,Neutral,NSA,CIA Privacy
+The Latest: Senate to Hold Hearing on Election Meddling,,2016-12-14,N,None,Neutral,US Govt.,CIA Privacy
+"Shifting US Policy to Right, Trump Taps Sessions, Flynn",,2016-11-18,N,US Citizens,Neutral,US Govt.,CIA Privacy
+Iran Releases Canadian-Iranian Professor Held Since June,,2016-09-26,N,None,Neutral,Iran+Canada,CIA Privacy
+Lawmakers Say Snowden Is No Whistleblower,US Committee-Snowden,2016-09-16,N,None,Neutral,NSA+US Govt.,CIA Privacy
+U.S. House Panel Slams Former NSA Contractor Snowden,US Committee-Snowden,2016-09-15,Y,US Government,Negative,NSA+US Govt.,CIA Privacy
+Congressional Report Slams NSA Leaker Edward Snowden,US Committee-Snowden,2016-09-15,N,US Government,Negative,NSA+US Govt.,CIA Privacy
+"U.S. Senator, Opposing FBI Email Data Grabs, Places Hold on Spy Bill",,2016-06-27,Y,US Government,Neutral,FBI,CIA Privacy
+CIA Director: US Hasn't Been Able to Curb IS Global Reach,,2016-06-16,N,World,Negative,CIA,CIA Privacy
+Whistleblower Snowden Gets Big Screen Treatment,,2016-04-27,N,World,Neutral,NSA,CIA Privacy
+Judge Seals Most Files in Court Case Over CIA Sex Case Leaks,CIA Sex Case Leaks,2016-04-15,Y,US Government,Neutral,CIA,CIA Privacy
+US Asks Judge to Seal Files in Case Over CIA Sex Case Leaks,CIA Sex Case Leaks,2016-04-08,Y,US Government,Neutral,CIA,CIA Privacy
+Judge Considers Unsealing Court File in CIA Sex Scandal Case,CIA Sex Case Leaks,2016-04-05,Y,US Government,Neutral,CIA,CIA Privacy
+Fla. Woman Ends Lawsuit Tied to Petraeus Resignation,Petraeus Resignation,2016-03-24,N,None,Neutral,CIA,CIA Privacy
+The Latest: Prosecutors Say 6 Arrested in Brussels Attacks,Brussels Attack,2016-03-24,N,World,Positive,Belgium Govt.,CIA Privacy
+U.S. Frustration Simmers Over Belgium's Struggle With Militant Threat,Brussels Attack,2016-03-24,N,World,Neutral,Belgium Govt.,CIA Privacy
+"CIA Director's Email: 'Something Terrible, Dishonorable",Petraeus Resignation,2016-03-23,Y,US,Negative,CIA,CIA Privacy
+Lawyers Abandon Federal Lawsuit Over CIA Head's Resignation,Petraeus Resignation,2016-03-18,N,None,Neutral,CIA,CIA Privacy
+German Spy Convicted of Selling Classified Documents to CIA,German Spy+CIA,2016-03-17,Y,World,Negative,CIA+Germany,CIA Privacy
+Apple Opposes Order to Help Unlock California Shooter's Phone,Apple-FBI,2016-02-17,Y,World,Positive,FBI+Apple,CIA Privacy
+Apple Ordered to Aid FBI in Unlocking California Shooter's Phone,Apple-FBI,2016-02-16,Y,World,Negative,FBI+Apple,CIA Privacy
+Massive Year-End Spending Bill Includes Cybersecurity Act,,2015-12-16,Y,US,Neutral,US Govt.,CIA Privacy
+The Latest: 4 Suspects Sought in Geneva Said to Have IS Ties,Paris Attacks,2015-12-10,N,World,Neutral,France Govt.,CIA Privacy
+House Passes Intelligence Bill With Policy Guidelines,,2015-12-01,N,US,Neutral,US Govt.,CIA Privacy
+"Paris Attacks Revive U.S. Arguments About Encryption, Surveillance",Paris Attacks,2015-11-16,Y,World,Neutral,US Govt.,CIA Privacy
+Here We Go Again: Paris Attacks May Renew Encryption Debate,Paris Attacks,2015-11-16,Y,World,Neutral,Worldwide,CIA Privacy
+Former German Spy Goes on Trial on Treason Charges,German Spy+CIA,2015-11-16,Y,World,Negative,CIA+Germany,CIA Privacy
+Secret Source in Hillary Clinton Email Was No Secret: CIA,Hillary Email,2015-10-19,Y,US,Neutral,CIA,CIA Privacy
+Journalists Subpoenaed in Lawsuit Over Petraeus Scandal,Petraeus Resignation,2015-09-22,N,US,Neutral,CIA+US Govt.,CIA Privacy
+Couple in Petraeus-Related Suit to Seek Reporters' Testimony,Petraeus Resignation,2015-09-03,N,US,Neutral,CIA+US Govt.,CIA Privacy
+Reporters Face Subpoenas in Case Over CIA Head's Resignation,Petraeus Resignation,2015-09-02,N,US,Negative,CIA,CIA Privacy
+Report: Colombia Collecting Bulk Data Without Warrants,,2015-08-31,Y,Columbia,Negative,Columbia,CIA Privacy
+German Spy Charged With Treason for Aiding CIA and Russia,German Spy+CIA,2015-08-20,Y,World,Neutral,CIA+Germany+Russia,CIA Privacy
+"Homeland' Season 5 Addresses ISIS, Charlie Hebdo, Snowden",,2015-08-11,N,World,Neutral,NSA,CIA Privacy
+Germany Wants Quick Clarification of New NSA Spy Allegations,,2015-07-03,Y,World,Neutral,NSA+Germany,CIA Privacy
+Surveillance Powers Lapse With No Deal in Senate,,2015-05-31,Y,US,Negative,NSA,CIA Privacy
+Sliver of Clinton Emails Hint at Lingering Political Trouble,Hillary Email,2015-05-23,Y,US,Negative,FBI,CIA Privacy
+"Bush, Christie Rise in Defense of Patriot Act",,2015-05-22,Y,US,Neutral,US Govt.,CIA Privacy
+Clinton Received Sensitive Info on Private Email Account,Hillary Email,2015-05-22,Y,US,Negative,US Govt.,CIA Privacy
+5 Things to Know About the NSA Court Ruling,NSA Tracking,2015-05-08,Y,US,Neutral,NSA+US Govt.,CIA Privacy
+AP Exclusive: NSA Weighed Ending Phone Program Before Leak,NSA Tracking,2015-03-30,Y,US,Neutral,NSA+US Govt.,CIA Privacy
+"AP Exclusive: Before Leak, NSA Mulled Ending Phone Program",NSA Tracking,2015-03-29,Y,US,Neutral,NSA+US Govt.,CIA Privacy
+Outgoing NSA Lawyer Helped Preserve Controversial Programs,NSA Tracking,2015-03-19,Y,US,Neutral,NSA+US Govt.,CIA Privacy
+CIA Sought to Hack Apple iPhones From Earliest Days: The Intercept,,2015-03-10,Y,US,Negative,CIA+Apple,CIA Privacy
+Rights Groups Call for Action Over Reported US-UK Phone Hack,,2015-02-20,Y,US-UK,Negative,US+UK,CIA Privacy
+Surveillance Tweaks Illustrate Little Change After Snowden,,2015-02-03,Y,US,Neutral,NSA+US Govt.,CIA Privacy
+Board: CIA Search of Senate Computers Reasonable,,2015-01-14,Y,US,Neutral,CIA,CIA Privacy

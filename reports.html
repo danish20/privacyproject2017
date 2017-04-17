@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="css/favicon.ico">
+        <title>Privacy CSC591 Project</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="css/jquery.csv.min.js" type="text/javascript"></script>
+        <script src="css/papaparse.min.js" type="text/javascript"></script>
+        <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="css/dashboard.css" rel="stylesheet">
+
+        <script src="css/ie-emulation-modes-warning.js"></script>
+        <script>
+            function nsa()
+            {
+
+                var reader = "Tag,Date,Privacy(Y/N),Impact,Sentiments,Agency,Keyword\n\
+Microsoft Says Users Are Protected From Alleged NSA Malware,2017-04-15,N,None,Neutral,NSA-Microsoft,NSA\n\
+Hackers Release Files Indicating NSA Monitored Global Bank Transfers,2017-04-14,Y,Middle Eastern Citizens(Dubai),Negative,NSA,NSA\n\
+Trump's Intelligence Doubts Parroted by Russia,2017-04-11,N,None,Neutral,NSA,NSA\n\
+Hacker Group Releases Password to Alleged NSA Files,2017-04-08,Y,US Citizens,Negative,NSA,NSA\n\
+\"Trump, Declining to Provide Evidence, Says Thinks Obama Adviser Rice Committed Crime: NYT\",2017-04-07,N,None,Neutral,NSA,NSA\n\
+A Scramble at Cisco Exposes Uncomfortable Truths About U.S. Cyber Defense,2017-03-29,Y,US Citizens,Negative,NSA-Wikileaks-Cisco-CIA,NSA\n\
+\"House Intelligence Postpones Closed Session With FBI, NSA\",2017-03-27,N,None,Neutral,NSA,NSA\n\
+The Week When Trump's Wiretap Accusation Died,2017-03-25,N,None,Neutral,NSA,NSA\n\
+Russia-US-Election-Interference,2017-03-24,Y,US Citizens,Negative,NSA,NSA\n\
+NSA-Telephone-Surveillance,2017-03-22,Y,US Citizens,Negative,NSA,NSA\n\
+Russia-US-Election-Interference,2017-03-21,Y,US Citizens,Negative,NSA,NSA\n\
+Russia-US-Election-Interference,2017-03-21,N,None,Neutral,NSA-FBI,NSA\n\
+Russia-US-Election-Interference,2017-03-20,N,None,Neutral,NSA-Republican,NSA\n\
+Russia-US-Election-Interference,2017-03-20,N,None,Neutral,DNC,NSA\n\
+Russia-US-Election-Interference,2017-03-19,N,None,Neutral,Devin Nunes,NSA\n\
+NSA-Telephone-Surveillance,2017-03-22,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+CIA-Wikileaks-Dump,2017-03-11,N,None,Neutral,CIA-NSA-Wikileaks,NSA+Privacy\n\
+CIA-Wikileaks-Dump,2017-03-07,Y,US Citizens,Negative,CIA-NSA-Wikileaks,NSA+Privacy\n\
+Trump-Spy-Law,2017-03-01,N,None,Neutral,US Govt,NSA+Privacy\n\
+Trump-Spy-Law,2017-01-18,Y,US Citizens,Positive,US Govt,NSA+Privacy\n\
+US Agencies Getting Access to Raw NSA Intercepts,2017-01-13,Y,Global,Negative,NSA-US Intelligence Agencies,NSA+Privacy\n\
+Lawsuit Over Alleged NSA Olympic Spying,2017-01-10,Y,Olympics,Negative,NSA,NSA+Privacy\n\
+Snowden in Contact With Russia's Spy Services,2016-12-22,N,None,Neutral,NSA,NSA+Privacy\n\
+US Privacy Board in Disarray Before Trump Takes Office,2016-12-22,N,None,Neutral,NSA,NSA+Privacy\n\
+Yahoo Email Scan,2016-12-21,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy\n\
+NSA Watchdog on Leave in Whistleblower Case,2016-12-19,N,None,Neutral,NSA,NSA+Privacy\n\
+U.S. to Disclose Estimate of Number of Americans Under Surveillance,2016-12-16,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+\"Trump Election Ignites Fears Over U.S. Encryption, Surveillance Policy\",2016-11-10,N,None,Neutral,US Govt,NSA+Privacy\n\
+Upstart Pirate Party Senses Victory in Iceland Elections,2016-10-28,N,None,Neutral,Iceland,NSA+Privacy\n\
+German Parliament Approves Controversial Espionage Law,2016-10-21,Y,German Citizens,Negative,NSA-Germany,NSA+Privacy\n\
+Should We See Everything a Cop Sees,2016-10-18,Y,US Citizens,Negative,US-Police,NSA+Privacy\n\
+NSA Contractor Arrest,2016-10-06,Y,NSA-US Citizens,Negative,NSA,NSA+Privacy\n\
+Yahoo Email Scan,2016-10-06,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy\n\
+NSA Contractor Arrest,2016-10-05,Y,NSA-US Citizens,Negative,NSA,NSA+Privacy\n\
+Yahoo Email Scan,2016-10-05,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy\n\
+Yahoo Email Scan,2016-10-04,Y,US Citizens,Negative,Yahoo-US Agencies,NSA+Privacy\n\
+U.S. Intelligence Community Opposes Limits to Privacy Watchdog,2016-10-03,Y,US Citizens,Neutral,NSA,NSA+Privacy\n\
+Snowden Is No Whistleblower,2016-09-16,N,None,Neutral,NSA,NSA+Privacy\n\
+Snowden Is No Whistleblower,2016-09-15,N,None,Neutral,NSA,NSA+Privacy\n\
+Oliver Stone Finds in 'Snowden' a Real Government Conspiracy,2016-09-13,N,None,Neutral,NSA,NSA+Privacy\n\
+Canada Stops Sharing Some Spy Info With Allies After Breach,2016-01-28,Y,Canadian Officials,Negative,NSA+CANDA,NSA+Privacy\n\
+NSA Phone Record Collection,2016-01-15,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-12-17,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-12-16,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+Cyber Data-Sharing,2015-12-15,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-12-08,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-12-07,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-12-05,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+Paris Attack,2015-11-28,N,None,Neutral,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-11-27,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+Paris Attack,2015-11-16,N,None,Neutral,NSA,NSA+Privacy\n\
+Microsoft to Keep German Customers' Cloud Data in Country,2015-11-11,Y,German Citizens,Negative,Microsoft-NSA-Germany,NSA+Privacy\n\
+NSA Phone Record Collection,2015-11-09,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-10-29,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+US Newly Accused of Spying in France,2015-06-24,Y,France,Negative,NSA+France,NSA+Privacy\n\
+NSA Phone Record Collection,2015-05-18,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-05-14,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-05-13,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-05-13,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+\"Germany Gives Huge Amount of Phone, Text Data to U.S.\",2015-05-12,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+U.S. Agency Sought German Help to Spy on Siemens-Newspaper,2015-05-10,Y,German Citizens,Negative,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-05-07,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+Republicans Move to Extend Spies' Power to Collect Phone Data,2015-04-22,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+House Passes Bill Designed to Thwart Cyberattacks,2015-04-22,N,None,Neutral,NSA,NSA+Privacy\n\
+NSA Phone Record Collection,2015-04-22,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+Privacy Advocates Seek More Openness on NSA Phone Record Collection,2015-04-22,Y,US Citizens,Negative,NSA,NSA+Privacy\n\
+\"NSA, British Spies Hack Gemalto to Tap Mobile Calls\",2015-02-19,Y,Gemalto,Negative,NSA+BritishSpy,NSA+Privacy+Breach\n\
+Flaws Could Expose Users of Privacy-Protecting Software,2014-07-23,Y,SoftwareUsers,Negative,NSA,NSA+Privacy+Breach\n\
+Global Netizens Worried About U.S. Spying,2013-06-01,Y,NSA-GlobalCitizens,Negative,NSA,NSA+Privacy+Breach";
+                var obj = Papa.parse(reader);
+                var content="";
+                for(var i=1;i<obj.data.length;i++)
+                {
+                    content += "<tr>";
+            content += "<td>" + obj.data[i][0] + "</td>" ;
+            content += "<td>" + obj.data[i][1] + "</td>" ;
+            content += "<td>" + obj.data[i][2] + "</td>" ;
+            content += "<td>" + obj.data[i][5] + "</td>" ;
+            content += "<td>" + obj.data[i][6] + "</td>" ;
+            
+            content += "</tr>";
+                }
+                document.getElementById("tbody").innerHTML=content;
+                
+            }
+            
+            function cia()
+            {
+                var reader = "Tag,Incident,Date,Privacy(Y/N),Impact,Sentiments,Agency,Keyword\n\
+CIA Director Takes Negative Tone on Group Trump Has Praised,CIA-Wikileaks,2017-04-14,Y,World,Negative,CIA,CIA Privacy\n\
+CIA Director Calls WikiLeaks 'Hostile Intelligence Service',CIA-Wikileaks,2017-04-13,Y,World,Negative,CIA,CIA Privacy\n\
+Obama Aide Denies Using Intel to Spy on Trump Advisers,,2017-04-04,Y,US Government,Negative,CIA+US Govt.,CIA Privacy\n\
+\"Trump Changes Relationship Between White House, Spy Agencies\",Trump-Russia,2017-04-01,Y,US Government,Negative,US Govt.,CIA Privacy\n\
+\"Trump\'s Approach to Intel Agencies Shows Anxiety, Distrust\",Trump-Russia,2017-03-31,Y,US Government,Negative,US Govt.,CIA Privacy\n\
+Apple: Software Flaws in Latest WikiLeaks Docs Are All Fixed,CIA-Wikileaks,2017-03-24,Y,World,Positive,Apple+CIA,CIA Privacy\n\
+Trump's Russian Imbroglio Prompts Republican Rethink on Surveillance Law,Trump-Russia,2017-03-20,Y,World,Neutral,US + Russia Govt.,CIA Privacy\n\
+Yahoo Breach Indictments May Shed Light on Other Hacks,Yahoo Breach,2017-03-16,Y,World,Positive,CIA+Yahoo,CIA Privacy\n\
+\"Russian Agents, Hackers Charged in Massive Yahoo Breach\",Yahoo Breach,2017-03-15,Y,World,Negative,Russia+CIA+Yahoo,CIA Privacy\n\
+\"Who and Why, Twin Mysteries Behind Leak of CIA's Cybertools\",CIA-Wikileaks,2017-03-12,Y,US Citizens,Negative,CIA-Wikileaks,CIA Privacy\n\
+What the CIA WikiLeaks Dump Tells Us: Encryption Works,CIA-Wikileaks,2017-03-11,N,None,Neutral,CIA-Wikileaks,CIA Privacy\n\
+WikiLeaks Offers CIA Hacking Tools to Tech Companies-Assange,CIA-Wikileaks,2017-03-09,Y,Tech Industry,Positive,CIA-Wikileaks,CIA Privacy\n\
+CIA Leaks Bolster Case for Privacy Treaty: UN Expert,CIA-Wikileaks,2017-03-09,Y,World,Negative,CIA-Wikileaks+UN,CIA Privacy\n\
+WikiLeaks Aid on CIA Software Holes Could Be Mixed Blessing,CIA-Wikileaks,2017-03-09,N,Tech Industry,Positive,CIA-Wikileaks,CIA Privacy\n\
+CIA Contractors Likely Source of Latest WikiLeaks Release-U.S. Officials,CIA-Wikileaks,2017-03-08,Y,World,Negative,CIA-Wikileaks,CIA Privacy\n\
+U.N. Expert Urges States to Work Toward Cyber Surveillance Treaty,,2017-03-08,Y,World,Positive,UN,CIA Privacy\n\
+WikiLeaks Fallout: Should You Worry About Alleged CIA Hacks?,,2017-03-08,Y,World,Neutral,CIA+Wikileaks,CIA Privacy\n\
+WikiLeaks: CIA Has Targeted Everyday Gadgets for Snooping,CIA-Wikileaks,2017-03-07,Y,World,Negative,CIA+Wikileaks,CIA Privacy\n\
+CIA Unveils New Rules for Collecting Information on Americans,CIA Info gather rule,2017-01-18,Y,US Citizens,Neutral,CIA,CIA Privacy\n\
+CIA Publishes Guidelines for Handling Americans' Info,CIA info gather rule,2017-01-18,Y,US Citizens,Neutral,CIA ,CIA Privacy\n\
+\"Gunman Shoots, Wounds US Consular Official in Mexico\",,2017-01-07,N,None,Negative,US Govt.,CIA Privacy\n\
+Yahoo Email Scan Shows U.S. Spy Push to Recast Constitutional Privacy,,2016-12-21,Y,World,Negative,Yahoo+US Govt.,CIA Privacy\n\
+NSA Watchdog on Leave in Whistleblower Case,,2016-12-19,N,None,Neutral,NSA,CIA Privacy\n\
+The Latest: Senate to Hold Hearing on Election Meddling,,2016-12-14,N,None,Neutral,US Govt.,CIA Privacy\n\
+\"Shifting US Policy to Right, Trump Taps Sessions, Flynn\",,2016-11-18,N,US Citizens,Neutral,US Govt.,CIA Privacy\n\
+Iran Releases Canadian-Iranian Professor Held Since June,,2016-09-26,N,None,Neutral,Iran+Canada,CIA Privacy\n\
+Lawmakers Say Snowden Is No Whistleblower,US Committee-Snowden,2016-09-16,N,None,Neutral,NSA+US Govt.,CIA Privacy\n\
+U.S. House Panel Slams Former NSA Contractor Snowden,US Committee-Snowden,2016-09-15,Y,US Government,Negative,NSA+US Govt.,CIA Privacy\n\
+Congressional Report Slams NSA Leaker Edward Snowden,US Committee-Snowden,2016-09-15,N,US Government,Negative,NSA+US Govt.,CIA Privacy\n\
+\"U.S. Senator, Opposing FBI Email Data Grabs, Places Hold on Spy Bill\",,2016-06-27,Y,US Government,Neutral,FBI,CIA Privacy\n\
+CIA Director: US Hasn't Been Able to Curb IS Global Reach,,2016-06-16,N,World,Negative,CIA,CIA Privacy\n\
+Whistleblower Snowden Gets Big Screen Treatment,,2016-04-27,N,World,Neutral,NSA,CIA Privacy\n\
+Judge Seals Most Files in Court Case Over CIA Sex Case Leaks,CIA Sex Case Leaks,2016-04-15,Y,US Government,Neutral,CIA,CIA Privacy\n\
+US Asks Judge to Seal Files in Case Over CIA Sex Case Leaks,CIA Sex Case Leaks,2016-04-08,Y,US Government,Neutral,CIA,CIA Privacy\n\
+Judge Considers Unsealing Court File in CIA Sex Scandal Case,CIA Sex Case Leaks,2016-04-05,Y,US Government,Neutral,CIA,CIA Privacy\n\
+Fla. Woman Ends Lawsuit Tied to Petraeus Resignation,Petraeus Resignation,2016-03-24,N,None,Neutral,CIA,CIA Privacy\n\
+The Latest: Prosecutors Say 6 Arrested in Brussels Attacks,Brussels Attack,2016-03-24,N,World,Positive,Belgium Govt.,CIA Privacy\n\
+U.S. Frustration Simmers Over Belgium's Struggle With Militant Threat,Brussels Attack,2016-03-24,N,World,Neutral,Belgium Govt.,CIA Privacy\n\
+\"CIA Director's Email: 'Something Terrible, Dishonorable\",Petraeus Resignation,2016-03-23,Y,US,Negative,CIA,CIA Privacy\n\
+Lawyers Abandon Federal Lawsuit Over CIA Head's Resignation,Petraeus Resignation,2016-03-18,N,None,Neutral,CIA,CIA Privacy\n\
+German Spy Convicted of Selling Classified Documents to CIA,German Spy+CIA,2016-03-17,Y,World,Negative,CIA+Germany,CIA Privacy\n\
+Apple Opposes Order to Help Unlock California Shooter's Phone,Apple-FBI,2016-02-17,Y,World,Positive,FBI+Apple,CIA Privacy\n\
+Apple Ordered to Aid FBI in Unlocking California Shooter's Phone,Apple-FBI,2016-02-16,Y,World,Negative,FBI+Apple,CIA Privacy\n\
+Massive Year-End Spending Bill Includes Cybersecurity Act,,2015-12-16,Y,US,Neutral,US Govt.,CIA Privacy\n\
+The Latest: 4 Suspects Sought in Geneva Said to Have IS Ties,Paris Attacks,2015-12-10,N,World,Neutral,France Govt.,CIA Privacy\n\
+House Passes Intelligence Bill With Policy Guidelines,,2015-12-01,N,US,Neutral,US Govt.,CIA Privacy\n\
+\"Paris Attacks Revive U.S. Arguments About Encryption, Surveillance\",Paris Attacks,2015-11-16,Y,World,Neutral,US Govt.,CIA Privacy\n\
+Here We Go Again: Paris Attacks May Renew Encryption Debate,Paris Attacks,2015-11-16,Y,World,Neutral,Worldwide,CIA Privacy\n\
+Former German Spy Goes on Trial on Treason Charges,German Spy+CIA,2015-11-16,Y,World,Negative,CIA+Germany,CIA Privacy\n\
+Secret Source in Hillary Clinton Email Was No Secret: CIA,Hillary Email,2015-10-19,Y,US,Neutral,CIA,CIA Privacy\n\
+Journalists Subpoenaed in Lawsuit Over Petraeus Scandal,Petraeus Resignation,2015-09-22,N,US,Neutral,CIA+US Govt.,CIA Privacy\n\
+Couple in Petraeus-Related Suit to Seek Reporters' Testimony,Petraeus Resignation,2015-09-03,N,US,Neutral,CIA+US Govt.,CIA Privacy\n\
+Reporters Face Subpoenas in Case Over CIA Head's Resignation,Petraeus Resignation,2015-09-02,N,US,Negative,CIA,CIA Privacy\n\
+Report: Colombia Collecting Bulk Data Without Warrants,,2015-08-31,Y,Columbia,Negative,Columbia,CIA Privacy\n\
+German Spy Charged With Treason for Aiding CIA and Russia,German Spy+CIA,2015-08-20,Y,World,Neutral,CIA+Germany+Russia,CIA Privacy\n\
+\"Homeland' Season 5 Addresses ISIS, Charlie Hebdo, Snowden\",,2015-08-11,N,World,Neutral,NSA,CIA Privacy\n\
+Germany Wants Quick Clarification of New NSA Spy Allegations,,2015-07-03,Y,World,Neutral,NSA+Germany,CIA Privacy\n\
+Surveillance Powers Lapse With No Deal in Senate,,2015-05-31,Y,US,Negative,NSA,CIA Privacy\n\
+Sliver of Clinton Emails Hint at Lingering Political Trouble,Hillary Email,2015-05-23,Y,US,Negative,FBI,CIA Privacy\n\
+\"Bush, Christie Rise in Defense of Patriot Act\",,2015-05-22,Y,US,Neutral,US Govt.,CIA Privacy\n\
+Clinton Received Sensitive Info on Private Email Account,Hillary Email,2015-05-22,Y,US,Negative,US Govt.,CIA Privacy\n\
+5 Things to Know About the NSA Court Ruling,NSA Tracking,2015-05-08,Y,US,Neutral,NSA+US Govt.,CIA Privacy\n\
+AP Exclusive: NSA Weighed Ending Phone Program Before Leak,NSA Tracking,2015-03-30,Y,US,Neutral,NSA+US Govt.,CIA Privacy\n\
+\"AP Exclusive: Before Leak, NSA Mulled Ending Phone Program\",NSA Tracking,2015-03-29,Y,US,Neutral,NSA+US Govt.,CIA Privacy\n\
+Outgoing NSA Lawyer Helped Preserve Controversial Programs,NSA Tracking,2015-03-19,Y,US,Neutral,NSA+US Govt.,CIA Privacy\n\
+CIA Sought to Hack Apple iPhones From Earliest Days: The Intercept,,2015-03-10,Y,US,Negative,CIA+Apple,CIA Privacy\n\
+Rights Groups Call for Action Over Reported US-UK Phone Hack,,2015-02-20,Y,US-UK,Negative,US+UK,CIA Privacy\n\
+Surveillance Tweaks Illustrate Little Change After Snowden,,2015-02-03,Y,US,Neutral,NSA+US Govt.,CIA Privacy\n\
+Board: CIA Search of Senate Computers Reasonable,,2015-01-14,Y,US,Neutral,CIA,CIA Privacy";
+                var obj = Papa.parse(reader);
+                var content="";
+                for(var i=1;i<obj.data.length;i++)
+                {
+                    content += "<tr>";
+            content += "<td>" + obj.data[i][0] + "</td>" ;
+            content += "<td>" + obj.data[i][2] + "</td>" ;
+            content += "<td>" + obj.data[i][3] + "</td>" ;
+            content += "<td>" + obj.data[i][6] + "</td>" ;
+            content += "<td>" + obj.data[i][7] + "</td>" ;
+            
+            content += "</tr>";
+                }
+                document.getElementById("tbody").innerHTML=content;
+            }
+            
+            function fbi()
+            {
+                var reader ="Tag,Incident,Date,Privacy(Y/N),Impact,Sentiments,Agency,Keyword,Source\n\
+Microsoft received surveillance requests from the U.S. government,,2017-04-13,Y,Global Citizens,-ve,FBI-microsoft,FBI Privacy,REUTERS\n\
+usa-cyber-poll,USA Cyber Poll,2017-04-06,Y,None - survey,-ve,Cyber Attack,FBI Privacy,REUTERS\n\
+usa-cyber-poll,USA Cyber Poll,2017-04-04,Y,None - survey,-ve,,FBI Privacy,REUTERS\n\
+twitter-trump-clinton-obama.html,Trump Russia,2017-04-03,Y,Trump and his party,neutral,American intelligence,FBI Privacy,REUTERS\n\
+ap-us-trump-russia-eager-to-testify,,2017-04-01,Y,Trump and his party,neutral,American intelligence,FBI Privacy,THE ASSOCIATED PRESS\n\
+ap-us-real-id-missouri.html,Missouri ID,2017-03-28,Y,State of Missouri,-ve,,FBI Privacy,THE ASSOCIATED PRESS\n\
+ap-us-anti-terrorism-lawsuit.html,National Suspicious Activity Reporting Initiative,2017-03-28,Y,US Citizens,-ve,Federal Law,FBI Privacy,THE ASSOCIATED PRESS\n\
+philip-johnson-rockefeller-guest-house-manhattan,Philip Johnson’s Rockefeller Guest House,2017/03/23,N,,,,,\n\
+usa-trump-highlights,Trum Day report,2017-03-22,N,,,,,\n\
+Neil Gorsuch wrapped up two days of Senate questioning,Neil Gorsuch wrapped up two days of Senate questioning,2017-03-22,N,,,,,\n\
+reuters-usa-trump-russia-surveillance.html,Trump Russia,2017-03-20,Y,Trump and his party,-ve,,FBI Privacy,REUTERS\n\
+Gorsuch underscores ‘independent judiciary’ but Democrats not buying Trump’s top court pick,Trump and Republic Party Work Process,2017-03-20,Y,Trump and his party,Positive,US Govt,FBI Privacy,REUTERS\n\
+us-yahoo-security-breach,Trump Russia,2017-03-16,Y,Trump and his party,Positive,US Govt,FBI Privacy,REUTERS\n\
+us-yahoo-security-breach,Trump Russia,2017-03-15,Y,Trump and his party,Positive,US Govt,FBI Privacy,REUTERS\n\
+Obama's Final Year: US Spent $36 Million in Records Lawsuits,Obama privacy non release,2017-03-14,Y,US Citizens,Positive,US Govt,FBI Privacy,THE ASSOCIATED PRESS\n\
+us-tec-wikileaks-cia-tech-encryption,Wikileaks on Snooping,2017-03-11,Y,US Citizens,Positive,WikiLeaks,FBI Privacy,THE ASSOCIATED PRESS\n\
+us-tec-wikileaks-cia-tech-encryption,Wikileaks on Snooping,2017-03-10,Y,US Citizens,Positive,WikiLeaks,FBI Privacy,THE ASSOCIATED PRESS\n\
+Child Porn Case Dropped as US Refuses to Show Software Code,Child Porn Case dropped after US refuses to share code,2017-03-09,Y,Web Pirates,Neutral,US Govt,FBI Privacy,THE ASSOCIATED PRESS\n\
+FBI's Comey: 'You're Stuck With Me for Another 6 1/2 Years,Trump Russia,2017-03-09,Y,Trump and his party,Positive,US Govt,FBI Privacy,THE ASSOCIATED PRESS\n\
+WikiLeaks Fallout: Should You Worry About Alleged CIA Hacks,Wikileaks on Snooping,2017-03-08,Y,US Citizens,Positive,WikiLeaks,FBI Privacy,THE ASSOCIATED PRESS\n\
+WikiLeaks: CIA Has Targeted Everyday Gadgets for Snooping,Wikileaks on Snooping,2017-03-07,Y,US Citizens,Positive,WikiLeaks,FBI Privacy,THE ASSOCIATED PRESS\n\
+U.S. House Passes Bill Requiring Warrants to Search Old Emails,Snooping,2017-02-06,Y,US Citizens,Positive,US Govt,FBI Privacy,THE ASSOCIATED PRESS\n\
+\"Google, Unlike Microsoft, Must Turn Over Foreign Emails: U.S. Judge\",Google to offer Foreign emails,2017-02-04,Y,US Citizens,-ve,Google - US Govt,FBI Privacy,THE ASSOCIATED PRESS\n\
+FBI Request for Twitter Account Data May Have Overstepped Legal Guidelines,FBI Snooping via Twitter,2017-01-28,Y,Twitter Users,-ve,Twitter - FBI,FBI Privacy,REUTERS\n\
+FBI Request for Twitter Account Data May Have Overstepped Legal Guidelines,FBI Snooping via Twitter,2017-01-27,Y,Twitter Users,-ve,Twitter - FBI,FBI Privacy,REUTERS\n\
+More US Agencies Getting Access to Raw NSA Intercepts,NSA Snooping and gives access,2017-01-13,Y,Global Citizens,-ve,NSA - FBI - Agencies,FBI Privacy,THE ASSOCIATED PRESS\n\
+\"Gunman Shoots, Wounds US Consular Official in Mexico\",\"Gunman Shoots, Wounds US Consular Official in Mexico\",2017-01-07,N,,,,,\n\
+Yahoo Email Scan Shows U.S. Spy Push to Recast Constitutional Privacy,US Govt Snooping via Yahoo,2016-12-21,Y,US Citizens,-ve,Yahoo - US Govt,FBI Privacy,REUTERS\n\
+House Report Urges Clearer Guidance on Cellphone Technology,Snooping Practices,2016-12-19,Y,US Citizens,Positive,LEA,FBI Privacy,THE ASSOCIATED PRESS\n\
+Judge Orders Release of Clinton Email Search Warrant,Clinton Email Check,2016-12-19,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+U.S. Judge Orders Unsealing of Clinton Email Probe Search Warrant,Clinton Email Check,2016-12-19,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+Trump Meets Silicon Valley Elite After Mutual Mistrust in Campaign,Trump Elections,2016-12-14,N,,,,,\n\
+The Latest: Senate to Hold Hearing on Election Meddling,Trump Elections,2016-12-14,N,,,,,\n\
+Terror Mystery: How US Man Went From Suburban Bliss to Jihad,US Man Went to Jihad,2016-12-13,N,,,,,\n\
+Appeals Court Affirms Conviction in Oregon Car-Bomb Plot,Oregon Bomb Blast Conviction,2016-12-05,Y,Oregon Bomb Blast Perpetrator,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+\"Tempers Flare, as Campaign Aides Assess Still-Raw 2016 Race\",Election Assesment,2016-12-02,N,,,,,\n\
+\"Tempers Flare, as Campaign Aides Assess Still-Raw 2016 Race\",Election Assesment,2016-12-02,N,,,,,\n\
+FBI to Gain Expanded Hacking Powers as Senate Effort to Block Fails,FBI allowed more power for hacking,2016-12-01,Y,US Citizens,-ve,FBI,FBI Privacy,REUTERS\n\
+FBI to Gain Expanded Hacking Powers as Senate Effort to Block Fails,FBI allowed more power for hacking,2016-11-30,Y,US Citizens,-ve,FBI,FBI Privacy,REUTERS\n\
+Congressman's Missing Son Found Safe in Texas,Congressman's Missing Son Found Safe in Texas,2016-11-18,N,,,,,\n\
+Search On in Houston for Missing Son of Rep. John Conyers,Congressman's Missing Son Found Safe in Texas,2016-11-17,N,,,,,\n\
+Facebook's WhatsApp Adds Secure Video Calling Amid Privacy Concerns,Whatsapp encrypted video calling,2016-11-15,Y,Whatsapp Users,Positive,Facebook - Whatsapp - US Govt,FBI Privacy,REUTERS\n\
+Yahoo Took Its Time Investigating Massive Security Breach,Yahoo Security Brach,2016-11-10,Y,Yahoo Users,-ve,Yahoo,FBI Privacy,THE ASSOCIATED PRESS\n\
+\"Trump Election Ignites Fears Over U.S. Encryption, Surveillance Policy\",Trump Victory ignites privacy concerns,2016-11-10,Y,US Citizens,-ve,US Govt,FBI Privacy,REUTERS\n\
+Comey Disclosure in Clinton Case Puts Him in Spotlight Again,Clinton Email Check,2016-10-29,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+Tech Privacy Ally Feingold Leads in Wisconsin Senate Race,Feingold in Wisconsin Senate Race,2016-10-27,Y,Tech Companies,Positive,US Govt,FBI Privacy,REUTERS\n\
+A Washington Ritual: Reading John Podesta's Stolen Emails,Clinton Email Check,2016-10-25,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+WHY IT MATTERS: Homegrown Extremism,Debate on Islamic Extremism,2016-10-22,N,,Neutral,,,\n\
+Rights Groups Request U.S. Probe Police Use of Facial Recognition,Use of Facial Recognition Technology,2016-10-18,Y,US Minority Groups,-ve,\"FBI, Police, DOJ\",FBI Privacy,REUTERS\n\
+Kansas Trio Accused of Plot to Attack Immigrants Get Lawyers,Kansas Trio Accused of Plot to Attack Immigrants Get Lawyers,2016-10-17,N,,,,,\n\
+White House Brief: Things to Know About Hillary Clinton,Clinton Email Check,2016-10-15,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+Clinton Dossier Has Only Grown Over Her Time in Public Eye,Clinton Email Check,2016-10-15,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+\"All About Clinton: Issues at Intersection of Money, Politics\",Clinton Email Check,2016-10-14,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+Pulse Victims' and Gunman's Family Can Testify on 911 Calls,Orlando Gay Nightclub Shooting,2016-10-11,Y,Orlando Shooting Stakeholders,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+WHY IT MATTERS: Homegrown Extremism,Debate on Islamic Extremism,2016-10-10,N,,Neutral,,,\n\
+Baltimore Police Took 1 Million Surveillance Photos of City,Baltimore Police Surveillance,2016-10-07,Y,Baltimore Citizens,Neutral,Baltimore Police,FBI Privacy,THE ASSOCIATED PRESS\n\
+FBI Says Minnesota Mall Attack Was Premeditated,Minnesota mall Attack,2016-10-06,Y,Minnesota Mall Attacker,Neutral,Minnesota Police,FBI Privacy,THE ASSOCIATED PRESS\n\
+NSA Contractor Arrest Highlights Challenge of Insider Threat,NSA Contractor Arrest,2016-10-06,N,,,,,\n\
+NSA Contractor Accused of Taking Classified Information,NSA Contractor Arrest,2016-10-05,N,,,,,\n\
+Reported Yahoo Email Scanning Revives Surveillance Concerns,US Govt Snooping via Yahoo,2016-10-05,Y,Yahoo Users,-ve,US Govt,FBI Privacy,THE ASSOCIATED PRESS\n\
+New FBI Head in San Francisco Was Key Figure in iPhone Hack,San Bernardino shooter iPhone hack,2016-10-05,Y,Culprits and US Citizens,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+Exclusive: Yahoo Secretly Scanned Customer Emails for U.S. Intelligence-Sources,US Govt Snooping via Yahoo,2016-10-04,Y,Yahoo Users,-ve,US Govt,FBI Privacy,REUTERS\n\
+Brad Pitt Skips Film Premiere to Focus on 'Family Situation',Brad Pitt Divorce,2016-09-28,N,,,,,\n\
+\"AP: Across US, Police Officers Abuse Confidential Databases\",Police Officers Snooping Abuse,2016-09-28,Y,US Citizens,-ve,Police,FBI Privacy,THE ASSOCIATED PRESS\n\
+Iran Releases Canadian-Iranian Professor Held Since June,Iran Releases Canadian-Iranian Professor Held Since June,2016-09-26,N,,,,,\n\
+FBI Says It's Evaluating Abuse Allegations Against Pitt,Brad Pitt Divorce,2016-09-23,N,,,,,\n\
+\"AP, Other Media Sue FBI for Details on iPhone Hacking Tool\",San Bernardino shooter iPhone hack,2016-09-16,Y,Culprits and US Citizens,-ve,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+The Latest: NY Attorney General Probing Trump's Charity,Trump and Republic Party Work Process,2016-09-13,Y,Hillary Clinton and her Party,Positive,FBI,FBI Privacy,THE ASSOCIATED PRESS\n\
+Microsoft Gets Support in Gag Order Lawsuit From U.S. Companies,FBI Snooping via Microsoft,2016-09-03,Y,US Citizens,Positive,Microsoft - FBI,FBI Privacy,REUTERS";
+         var obj = Papa.parse(reader);
+                var content="";
+                for(var i=1;i<obj.data.length;i++)
+                {
+                    content += "<tr>";
+            content += "<td>" + obj.data[i][0] + "</td>" ;
+            content += "<td>" + obj.data[i][2] + "</td>" ;
+            content += "<td>" + obj.data[i][3] + "</td>" ;
+            content += "<td>" + obj.data[i][6] + "</td>" ;
+            content += "<td>" + obj.data[i][7] + "</td>" ;
+            
+            content += "</tr>";
+                }
+                document.getElementById("tbody").innerHTML=content;        
+    }
+    
+    function dod()
+    {
+           var reader = "Tag,Incident,Date,Privacy(Y/N),Impact,Sentiments,Agency,Keyword\n\
+Court: US Does Not Have to Disclose Army School Trainees,,2016-09-30,Y,US,Negative,DOD,DOD Privacy\n\
+DOD Uses Undisclosed Files to Defend Sex Assault Testimony,,2016-05-28,Y,US,Negative,DOD,DOD Privacy\n\
+Transcript of the Republican Presidential Debate in Houston,,2016-02-26,N,US,Neutral,US Govt.,DOD Privacy\n\
+What DOD Doesn\'t Want You to Know About Military Justice,,2015-11-18,Y,US,Negative,DOD,DOD Privacy\n\
+Opaque Military Justice System Shields Child Sex Abuse Cases,,2015-11-18,Y,US,Negative,DOD,DOD Privacy\n\
+AP IMPACT: US Agencies Struggle vs. Cyberattacks,,2014-11-10,Y,US,Negative,US Agencies,DOD Privacy\n\
+Tampa Woman Can Pursue Part of Lawsuit Over Petraeus Scandal Leak,,2014-09-15,Y,US,Negative,CIA,DOD Privacy\n\
+N.S.A. Releases Email That It Says Undercuts Snowden’s Whistle-Blower Claim,,2014-05-30,Y,US,Neutral,NSA,DOD Privacy\n\
+Obama Meets Lawmakers Ahead of Intelligence Reform Decisions,,2014-01-09,Y,US,Neutral,US Agencies,DOD Privacy\n\
+Israeli Raid Canceled After Facebook Leak,,2010-03-03,Y,Israel,Neutral,Israeli+FB,DOD Privacy\n\
+Not to See The Fallen Is No Favor,,2007-05-28,N,US,Neutral,US Military,DOD Privacy\n\
+Deleted But Not Gone,,2005-11-03,Y,None,Neutral,Internet,DOD Privacy\n\
+Broader Authority Recommended for the Director of Central Intelligence Excerpts,,1976-04-27,N,None,Neutral,Central Intelligence,DOD Privacy"; 
+         var obj = Papa.parse(reader);
+                var content="";
+                for(var i=1;i<obj.data.length;i++)
+                {
+                    content += "<tr>";
+            content += "<td>" + obj.data[i][0] + "</td>" ;
+            content += "<td>" + obj.data[i][2] + "</td>" ;
+            content += "<td>" + obj.data[i][3] + "</td>" ;
+            content += "<td>" + obj.data[i][6] + "</td>" ;
+            content += "<td>" + obj.data[i][7] + "</td>" ;
+            
+            content += "</tr>";
+                }
+                document.getElementById("tbody").innerHTML=content;
+    }
+        
+        </script>
+    </head>
+
+    <body onload="fbi()">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">US Agencies Corpus</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li><a href="index.html">Overview</a></li>
+                        <li class="active"><a href="#">Reports <span class="sr-only">(current)</span></a></li>
+                        <li><a href="analytics.html">Analytics</a></li>
+                        <li><a href="search.html">Search Using API</a></li>
+                    </ul>
+                    <cite>Contributors:</cite>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">Danish Suri</a></li>
+                        <li><a href="">Sagar Gupta</a></li>
+                        <li><a href="">Krishna Agarwala</a></li>
+                    </ul>
+                    <cite>Data Source and References</cite>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">New York Times API</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">Reports</h1>
+
+
+                    
+                     <ul class="sub-header nav navbar-nav navbar-left">
+                        <li id="fbi"><button class="btn-primary btn-link btn-block" onclick="fbi()">FBI</button></li>
+                        <li id="cia"><button class="btn-primary btn-link btn-block" onclick="cia()">CIA</button></li>
+                        <li id="nsa"><button class="btn-primary btn-link btn-block" onclick="nsa()">NSA</button></li>
+                        <li id="dod"><button class="btn-primary btn-link btn-block" onclick="dod()">DOD</button></li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Date</th>
+                                    <th>Privacy News?</th>
+                                    <th>Agencies Involved</th>
+                                    <th>Keyword Searched</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+        <script src="../../assets/js/vendor/holder.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>

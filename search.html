@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="css/favicon.ico">
+    <title>Privacy CSC591 Project</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <script src="css/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript">
+</script>
+    <script>
+        function go(page)
+        {
+            var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+            var apikey = document.getElementById("apik").value, q=document.getElementById("q").value;
+        url += '?' + $.param({
+  'api-key': apikey,
+  'sort': "newest",
+  'page': page,
+  'q': q
+});
+$.ajax({
+  url: url,
+  method: 'GET'
+}).done(function(result) {
+    var content="";
+                for(var i=0;i<result.response.docs.length;i++)
+                {
+                    content += "<tr>";
+            content += "<td>" + result.response.docs[i].headline.main + "</td>" ;
+            content += "<td>" + result.response.docs[i].pub_date.split('T')[0] + "</td>" ;
+            content += "<td><a href=\"" + result.response.docs[i].web_url + "\">Link</a></td>" ;
+            content += "<td>" + result.response.docs[i].source + "</td>" ;
+            content += "</tr>";
+                }
+                document.getElementById("tbody").innerHTML=content;
+  console.log(result.response.docs[0].web_url);
+}).fail(function(err) {
+  throw err;
+});
+        }
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">US Agencies Corpus</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+              <li><a href="index.html">Overview </a></li>
+            <li><a href=reports.html>Reports</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li class="active"><a href="#">Search Using API<span class="sr-only">(current)</span></a></li>
+          </ul>
+            <cite>Contributors:</cite>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Danish Suri</a></li>
+            <li><a href="">Sagar Gupta</a></li>
+            <li><a href="">Krishna Agarwala</a></li>
+          </ul>
+            <cite>Data Source and References</cite>
+          <ul class="nav nav-sidebar">
+            <li><a href="">New York Times API</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Overview</h1>
+
+          <div class="row placeholders">
+              <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Search New York Times</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+          <form class="navbar-form navbar-left">
+        <div class="form-group">
+            <input type="text" class="form-control" id="apik" placeholder="API Keys" required>
+        </div>
+          </form>
+        
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" id="q" placeholder="Search Query" required>
+        </div>
+          <button type="submit" class="btn btn-default" onclick="go(0)">Submit</button>
+      </form>
+         
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+          </div>
+
+          <h3 class="sub-header">Results</h3>
+  
+          </div>
+                 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    
+                     <nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li onclick="go(0)"><a href="#">1</a></li>
+    <li id="lis2"><a href="#" onclick="go(1)">2</a></li>
+    <li id="lis3"><a href="#" onclick="go(2)">3</a></li>
+    <li id="lis4"><a href="#" onclick="go(3)">4</a></li>
+    <li id="lis5"><a href="#" onclick="go(4)">5</a></li>
+    <li>
+      <a href="#" aria-label="Next" onclick="go(<%=page++%>)">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Headline</th>
+                                    <th>Date</th>
+                                    <th>URL</th>
+                                    <th>Source</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                     
+                     
+
+                </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
